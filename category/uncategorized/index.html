@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Uncategorized – Hanjirito</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://hanjirito.github.io/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="ribbon-lite-style-css" href="https://hanjirito.github.io/wp-content/themes/ribbon-lite/style.css" type="text/css" media="all"><style id="ribbon-lite-style-inline-css" type="text/css">
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Uncategorized – Hanjirito</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://hanjirito.github.io/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="secure-copy-content-protection-css" href="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/css/secure-copy-content-protection-public.css" type="text/css" media="all"><link rel="stylesheet" id="ribbon-lite-style-css" href="https://hanjirito.github.io/wp-content/themes/ribbon-lite/style.css" type="text/css" media="all"><style id="ribbon-lite-style-inline-css" type="text/css">
 
         #site-header { background-image: url(''); }
         #tabber .inside li .meta b,footer .widget li a:hover,.fn a,.reply a,#tabber .inside li div.info .entry-title a:hover, #navigation ul ul a:hover,.single_post a, a:hover, .sidebar.c-4-12 .textwidget a, #site-footer .textwidget a, #commentform a, #tabber .inside li a, .copyrights a:hover, a, .sidebar.c-4-12 a:hover, .top a:hover, footer .tagcloud a:hover { color: #1e73be; }
@@ -11,7 +11,493 @@
 
         .primary-navigation, footer, .readMore a:hover, #commentform input#submit:hover, .featured-thumbnail .latestPost-review-wrapper { background-color: #364956; }
 			
-</style><link rel="stylesheet" id="theme-slug-fonts-css" href="//fonts.googleapis.com/css?family=Monda%3A400%2C700" type="text/css" media="all"><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/themes/ribbon-lite/js/customscripts.js"></script><style type="text/css">
+</style><link rel="stylesheet" id="theme-slug-fonts-css" href="//fonts.googleapis.com/css?family=Monda%3A400%2C700" type="text/css" media="all"><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/js/secure-copy-content-protection-public.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/js/jquery.mobile.custom.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/themes/ribbon-lite/js/customscripts.js"></script></head><body><div id="ays_tooltip">You cannot copy content of this page</div>
+                    <style>
+                        #ays_tooltip {
+                            background-color: #ffffff;
+                            background-image: url();
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border: 1px solid #b7b7b7;
+                            border-radius: 3px;
+                            box-shadow: rgba(0,0,0,0) 0px 0px 15px 1px;
+                            color: #ff0000;
+                            padding: 5px;
+                            font-size: 12px;
+                        }
+                        
+                        #ays_tooltip > * {
+                            color: #ff0000;
+                            font-size: 12px;
+                        }
+                       
+                    </style><style>
+                *::selection {
+            background-color: transparent !important;
+            color: inherit !important;
+        }
+
+        *::-moz-selection {
+            background-color: transparent !important;
+            color: inherit !important;
+        }
+
+            </style><script>
+        function stopPrntScr() {
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", "Access Denied");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
+        }
+
+        (function ($) {
+            'use strict';
+            $(function () {
+                let all = $('*').not('script, meta, link, style, noscript, title'),
+                    tooltip = $('#ays_tooltip'),
+                    tooltipClass = "mouse";
+                if (tooltipClass == "mouse") {
+	                                    all.on('mousemove', function (e) {
+                        let cordinate_x = e.pageX;
+                        let cordinate_y = e.pageY;
+                        let windowWidth = $(window).width();
+                        if (cordinate_y < tooltip.outerHeight()) {
+                            tooltip.css({'top': (cordinate_y + 10) + 'px'});
+                        } else {
+                            tooltip.css({'top': (cordinate_y - tooltip.outerHeight()) + 'px'});
+                        }
+                        if (cordinate_x > (windowWidth - tooltip.outerWidth())) {
+                            tooltip.css({'left': (cordinate_x - tooltip.outerWidth()) + 'px'});
+                        } else {
+                            tooltip.css({'left': (cordinate_x + 5) + 'px'});
+                        }
+
+                    });
+	                                } else {
+                    tooltip.addClass(tooltipClass);
+                }
+				                $(window).on('keyup', function (e) {
+                    let keyCode = e.keyCode ? e.keyCode : e.which;
+                    if (keyCode == 44) {
+                        stopPrntScr();
+                        show_tooltip( );
+                        audio_play();
+                    }
+                });
+				
+
+				                $(document).on('contextmenu', function (e) {
+                    let t = e || window.event;
+                    let n = t.target || t.srcElement;
+                    if (n.nodeName !== "A") {
+                        show_tooltip( );
+                        audio_play();
+                    }
+                    return false;
+                });
+	            
+	            
+				                $(document).on('dragstart', function () {
+                    show_tooltip( );
+                    audio_play();
+                    return false;
+                });
+				
+				
+                $(window).on('keydown', function (event) {
+                    var isOpera = (BrowserDetect.browser === "Opera");
+
+                    var isFirefox = (BrowserDetect.browser === 'Firefox');
+
+                    var isSafari = (BrowserDetect.browser === 'Safari');
+
+                    var isIE = (BrowserDetect.browser === 'Explorer');
+
+                    var isChrome = (BrowserDetect.browser === 'Chrome');
+
+                    if (BrowserDetect.OS === 'Windows') {
+						                        if (isChrome) {
+                            if (((event.ctrlKey && event.shiftKey) && (
+                                event.keyCode === 73 ||
+                                event.keyCode === 74 ||
+                                event.keyCode === 67))) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+                        if (isFirefox) {
+                            if (((event.ctrlKey && event.shiftKey) && (
+                                event.keyCode === 73 ||
+                                event.keyCode === 74 ||
+                                event.keyCode === 67 ||
+                                event.keyCode === 75 ||
+                                event.keyCode === 69)) ||
+                                event.keyCode === 118 ||
+                                event.keyCode === 116 ||
+                                (event.keyCode === 112 && event.shiftKey) ||
+                                (event.keyCode === 115 && event.shiftKey) ||
+                                (event.keyCode === 118 && event.shiftKey) ||
+                                (event.keyCode === 120 && event.shiftKey)) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+                        if (isOpera) {
+                            if (((event.ctrlKey && event.shiftKey) && (
+                                event.keyCode === 73 ||
+                                event.keyCode === 74 ||
+                                event.keyCode === 67 ||
+                                event.keyCode === 88 ||
+                                event.keyCode === 69))) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+                        if (isIE) {
+                            if ((event.keyCode === 123 && event.shiftKey)) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+						
+						                        if ((event.keyCode === 83 && event.ctrlKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 65 && event.ctrlKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 86 && event.ctrlKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 88 && event.ctrlKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 85 && event.ctrlKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						
+						                        if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						                    } else if (BrowserDetect.OS === 'Linux') {
+						                        if (isChrome) {
+                            if (
+                                (
+                                    (event.ctrlKey && event.shiftKey) &&
+                                    (event.keyCode === 73 ||
+                                        event.keyCode === 74 ||
+                                        event.keyCode === 67
+                                    )
+                                ) ||
+                                (event.ctrlKey && event.keyCode === 85)
+                            ) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+                        if (isFirefox) {
+                            if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 75 || event.keyCode === 69)) || event.keyCode === 118 || event.keyCode === 116 || (event.keyCode === 112 && event.shiftKey) || (event.keyCode === 115 && event.shiftKey) || (event.keyCode === 118 && event.shiftKey) || (event.keyCode === 120 && event.shiftKey) || (event.keyCode === 85 && event.ctrlKey)) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+                        if (isOpera) {
+                            if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 88 || event.keyCode === 69)) || (event.ctrlKey && event.keyCode === 85)) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+						
+						                        if ((event.keyCode === 83 && event.ctrlKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if (event.keyCode === 65 && event.ctrlKey) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 86 && event.ctrlKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 88 && event.ctrlKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 85 && event.ctrlKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						
+						                        if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						                    } else if (BrowserDetect.OS === 'Mac') {
+						                        if (isChrome || isSafari || isOpera || isFirefox) {
+                            if (event.metaKey && (
+                                event.keyCode === 73 ||
+                                event.keyCode === 74 ||
+                                event.keyCode === 69 ||
+                                event.keyCode === 75)) {
+                                show_tooltip();
+                                audio_play();
+                                return false;
+                            }
+                        }
+						
+						                        if ((event.keyCode === 83 && event.metaKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 65 && event.metaKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 67 && event.metaKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 86 && event.metaKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 88 && event.metaKey)) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 85 && event.metaKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						                        if ((event.keyCode === 70 && event.metaKey) || (event.keyCode === 71 && event.metaKey)) {
+                            show_tooltip( );
+                            audio_play();
+                            return false;
+                        }
+						
+						
+						                        if (event.keyCode === 123) {
+                            show_tooltip();
+                            audio_play();
+                            return false;
+                        }
+						                    }
+                });
+
+                function disableSelection(e) {
+                    if (typeof e.onselectstart !== "undefined")
+                        e.onselectstart = function () {
+                            show_tooltip( );
+                            audio_play();
+                            return false
+                        };
+                    else if (typeof e.style.MozUserSelect !== "undefined")
+                        e.style.MozUserSelect = "none";
+                    else e.onmousedown = function () {
+                            show_tooltip();
+                            audio_play();
+                            return false
+                        };
+                    e.style.cursor = "default"
+                }
+
+                function show_tooltip(mess) {
+                    if (mess) {
+                        tooltip.css({'display': 'table'});
+                        setTimeout(function () {
+                            $('#ays_tooltip').fadeOut(500);
+                        }, 1000);
+                    }
+                }
+
+                function audio_play(audio) {
+                    if (audio) {
+                        var audio = document.getElementById("sccp_public_audio");
+                        if (audio) {
+                            audio.currentTime = 0;
+                            audio.play();
+                        }
+
+                    }
+                }
+
+
+            });
+        })(jQuery);
+
+        var BrowserDetect = {
+            init: function () {
+                this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+                this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+                this.OS = this.searchString(this.dataOS) || "an unknown OS";
+            },
+            searchString: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var dataString = data[i].string;
+                    var dataProp = data[i].prop;
+                    this.versionSearchString = data[i].versionSearch || data[i].identity;
+                    if (dataString) {
+                        if (dataString.indexOf(data[i].subString) !== -1) return data[i].identity;
+                    } else if (dataProp) return data[i].identity;
+                }
+            },
+            searchVersion: function (dataString) {
+                var index = dataString.indexOf(this.versionSearchString);
+                if (index === -1) return;
+                return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+            },
+            dataBrowser: [{
+                string: navigator.userAgent,
+                subString: "Chrome",
+                identity: "Chrome"
+            }, {
+                string: navigator.userAgent,
+                subString: "OmniWeb",
+                versionSearch: "OmniWeb/",
+                identity: "OmniWeb"
+            }, {
+                string: navigator.vendor,
+                subString: "Apple",
+                identity: "Safari",
+                versionSearch: "Version"
+            }, {
+                prop: window.opera,
+                identity: "Opera",
+                versionSearch: "Version"
+            }, {
+                string: navigator.vendor,
+                subString: "iCab",
+                identity: "iCab"
+            }, {
+                string: navigator.vendor,
+                subString: "KDE",
+                identity: "Konqueror"
+            }, {
+                string: navigator.userAgent,
+                subString: "Firefox",
+                identity: "Firefox"
+            }, {
+                string: navigator.vendor,
+                subString: "Camino",
+                identity: "Camino"
+            }, { // for newer Netscapes (6+)
+                string: navigator.userAgent,
+                subString: "Netscape",
+                identity: "Netscape"
+            }, {
+                string: navigator.userAgent,
+                subString: "MSIE",
+                identity: "Explorer",
+                versionSearch: "MSIE"
+            }, {
+                string: navigator.userAgent,
+                subString: "Gecko",
+                identity: "Mozilla",
+                versionSearch: "rv"
+            }, { // for older Netscapes (4-)
+                string: navigator.userAgent,
+                subString: "Mozilla",
+                identity: "Netscape",
+                versionSearch: "Mozilla"
+            }],
+            dataOS: [{
+                string: navigator.platform,
+                subString: "Win",
+                identity: "Windows"
+            }, {
+                string: navigator.platform,
+                subString: "Mac",
+                identity: "Mac"
+            }, {
+                string: navigator.userAgent,
+                subString: "iPhone",
+                identity: "iPhone/iPod"
+            }, {
+                string: navigator.platform,
+                subString: "Linux",
+                identity: "Linux"
+            }]
+        };
+        BrowserDetect.init();
+    </script><style type="text/css">
 			.site-title,
 		.site-description {
 			position: absolute;
@@ -27,8 +513,7 @@
 	background:#e13138; }
 a.toggle-mobile-menu {
 	font-weight:800;
-}		</style></head><body class="archive category category-uncategorized category-1 wp-custom-logo hfeed">
-    <div class="main-container">
+}		</style><div class="main-container">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 		<header id="site-header" role="banner"><div class="container clear">
 				<div class="site-branding">
