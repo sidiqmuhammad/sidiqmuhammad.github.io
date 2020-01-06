@@ -11,7 +11,7 @@
 
         .primary-navigation, footer, .readMore a:hover, #commentform input#submit:hover, .featured-thumbnail .latestPost-review-wrapper { background-color: #364956; }
 			
-</style><link rel="stylesheet" id="theme-slug-fonts-css" href="//fonts.googleapis.com/css?family=Monda%3A400%2C700" type="text/css" media="all"><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/js/secure-copy-content-protection-public.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/js/jquery.mobile.custom.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/themes/ribbon-lite/js/customscripts.js"></script><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-152.png"><link rel="icon" sizes="152x152" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-152.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-144.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-144.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-120.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-72.png"><link rel="apple-touch-icon-precomposed" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-57.png"></head><body><div id="ays_tooltip">You cannot copy content of this page</div>
+</style><link rel="stylesheet" id="theme-slug-fonts-css" href="//fonts.googleapis.com/css?family=Monda%3A400%2C700" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://hanjirito.github.io/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://hanjirito.github.io/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://hanjirito.github.io/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://hanjirito.github.io/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.3.2" type="text/css" media="all"><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/js/secure-copy-content-protection-public.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/secure-copy-content-protection/public/js/jquery.mobile.custom.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/themes/ribbon-lite/js/customscripts.js"></script><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-152.png"><link rel="icon" sizes="152x152" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-152.png"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-144.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-144.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-120.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-72.png"><link rel="apple-touch-icon-precomposed" href="https://hanjirito.github.io/wp-content/uploads/2019/12/favicon-57.png"></head><body><div id="ays_tooltip">You cannot copy content of this page</div>
                     <style>
                         #ays_tooltip {
                             background-color: #ffffff;
@@ -82,32 +82,10 @@
 	                                } else {
                     tooltip.addClass(tooltipClass);
                 }
-				                $(window).on('keyup', function (e) {
-                    let keyCode = e.keyCode ? e.keyCode : e.which;
-                    if (keyCode == 44) {
-                        stopPrntScr();
-                        show_tooltip( );
-                        audio_play();
-                    }
-                });
 				
 
-				                $(document).on('contextmenu', function (e) {
-                    let t = e || window.event;
-                    let n = t.target || t.srcElement;
-                    if (n.nodeName !== "A") {
-                        show_tooltip( );
-                        audio_play();
-                    }
-                    return false;
-                });
+				
 	            
-	            
-				                $(document).on('dragstart', function () {
-                    show_tooltip( );
-                    audio_play();
-                    return false;
-                });
 				
 				
                 $(window).on('keydown', function (event) {
@@ -122,243 +100,35 @@
                     var isChrome = (BrowserDetect.browser === 'Chrome');
 
                     if (BrowserDetect.OS === 'Windows') {
-						                        if (isChrome) {
-                            if (((event.ctrlKey && event.shiftKey) && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 67))) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isFirefox) {
-                            if (((event.ctrlKey && event.shiftKey) && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 67 ||
-                                event.keyCode === 75 ||
-                                event.keyCode === 69)) ||
-                                event.keyCode === 118 ||
-                                event.keyCode === 116 ||
-                                (event.keyCode === 112 && event.shiftKey) ||
-                                (event.keyCode === 115 && event.shiftKey) ||
-                                (event.keyCode === 118 && event.shiftKey) ||
-                                (event.keyCode === 120 && event.shiftKey)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isOpera) {
-                            if (((event.ctrlKey && event.shiftKey) && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 67 ||
-                                event.keyCode === 88 ||
-                                event.keyCode === 69))) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isIE) {
-                            if ((event.keyCode === 123 && event.shiftKey)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-						
-						                        if ((event.keyCode === 83 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 65 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 86 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 88 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 85 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
 						
 						
-						                        if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
+						
+						
+						
+						
+						
+						
+						
 						                    } else if (BrowserDetect.OS === 'Linux') {
-						                        if (isChrome) {
-                            if (
-                                (
-                                    (event.ctrlKey && event.shiftKey) &&
-                                    (event.keyCode === 73 ||
-                                        event.keyCode === 74 ||
-                                        event.keyCode === 67
-                                    )
-                                ) ||
-                                (event.ctrlKey && event.keyCode === 85)
-                            ) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isFirefox) {
-                            if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 75 || event.keyCode === 69)) || event.keyCode === 118 || event.keyCode === 116 || (event.keyCode === 112 && event.shiftKey) || (event.keyCode === 115 && event.shiftKey) || (event.keyCode === 118 && event.shiftKey) || (event.keyCode === 120 && event.shiftKey) || (event.keyCode === 85 && event.ctrlKey)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isOpera) {
-                            if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 88 || event.keyCode === 69)) || (event.ctrlKey && event.keyCode === 85)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-						
-						                        if ((event.keyCode === 83 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if (event.keyCode === 65 && event.ctrlKey) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 86 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 88 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 85 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
 						
 						
-						                        if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
+						
+						
+						
+						
+						
+						
+						
 						                    } else if (BrowserDetect.OS === 'Mac') {
-						                        if (isChrome || isSafari || isOpera || isFirefox) {
-                            if (event.metaKey && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 69 ||
-                                event.keyCode === 75)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-						
-						                        if ((event.keyCode === 83 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 65 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 67 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 86 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 88 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 85 && event.metaKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 70 && event.metaKey) || (event.keyCode === 71 && event.metaKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
 						
 						
-						                        if (event.keyCode === 123) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
+						
+						
+						
+						
+						
+						
+						
 						                    }
                 });
 
@@ -497,28 +267,26 @@
             }]
         };
         BrowserDetect.init();
-    </script><style type="text/css">
-			.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-		</style><style type="text/css" id="wp-custom-css">
+    </script><style type="text/css" id="wp-custom-css">
 			.postauthor, .thecomment {
 	display:none; }
 .site-branding {
-	margin:-8px auto;
+	margin:-25px auto -22px auto;
 }
 .social-profile-icons .social-instagram a {
 	background:#e13138; }
-a.toggle-mobile-menu {
+.image-logo img {
+	max-width:250px
+}
+/* a.toggle-mobile-menu {
 	font-weight:800;
-}		</style><div class="main-container">
+}
+*/		</style><div class="main-container">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 		<header id="site-header" role="banner"><div class="container clear">
 				<div class="site-branding">
 																	    <h2 id="logo" class="image-logo" itemprop="headline">
-								<a href="https://hanjirito.github.io/" class="custom-logo-link" rel="home"><img width="249" height="55" src="https://hanjirito.github.io/wp-content/uploads/2019/12/Hanjirito.png" class="custom-logo" alt="Hanjirito"></a>							</h2>
+								<a href="https://hanjirito.github.io/" class="custom-logo-link" rel="home"><img width="889" height="300" src="https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon.png" class="custom-logo" alt="Hanjirito" srcset="https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon.png 889w,https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon-300x101.png 300w,https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon-768x259.png 768w" sizes="(max-width: 889px) 100vw, 889px"></a>							</h2>
 															</div>
 							</div>
 			<div class="primary-navigation">
@@ -533,7 +301,7 @@ a.toggle-mobile-menu {
 		
 		<article class="article"><div id="post-10" class="post post-10 type-post status-publish format-standard has-post-thumbnail hentry category-linux">
 					<div class="single_post">
-					    <div class="post-date-ribbon"><div class="corner"></div>December 24, 2019</div>
+					    <div class="post-date-ribbon"><div class="corner"></div>January 5, 2020</div>
 					    							<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb" class="root"><a rel="v:url" property="v:title" href="https://hanjirito.github.io">Home</a></span><span><i class="ribbon-icon icon-angle-double-right"></i></span><span typeof="v:Breadcrumb"><a href="https://hanjirito.github.io/category/linux/" rel="v:url" property="v:title">Linux</a></span><span><i class="ribbon-icon icon-angle-double-right"></i></span><span><span>Raih Kebebasan dengan Linux!</span></span></div>
 												<header><h1 class="title single-title">Raih Kebebasan dengan Linux!</h1>
 							
@@ -545,9 +313,33 @@ a.toggle-mobile-menu {
 							</div>
 							
 						</header><div id="content" class="post-single-content box mark-links">
-							
-<p>This is my first post & just for sample.</p>
-																						
+									<div data-elementor-type="wp-post" data-elementor-id="10" class="elementor elementor-10" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-6657eb3b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6657eb3b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2d20cf1c elementor-column elementor-col-100 elementor-top-column" data-id="2d20cf1c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3ac83f6b elementor-widget elementor-widget-text-editor" data-id="3ac83f6b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">
+<p><a href="https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14.png"><img class="aligncenter wp-image-85 size-full" src="https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14.png" alt="" width="1600" height="900" srcset="https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14.png 1600w,https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14-300x169.png 300w,https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14-1024x576.png 1024w,https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14-768x432.png 768w,https://hanjirito.github.io/wp-content/uploads/2020/01/Screenshot_2020-01-02_14-39-14-1536x864.png 1536w" sizes="(max-width: 1600px) 100vw, 1600px"></a></p>
+<p>      Terhitung dari tanggal 14 Desember 2019 kemarin Thikpad T450 yang biasa menemani saya bertempur terlihat semakin cantik menggunakan <em>Arch</em> yang merupakan Sistem Operasi berbasis <em>Linux</em>, dan itu artinya saya harus memulai semuanya dari awal, mulai melambaikan tangan kepada <em>Windows</em>,<em> Microsoft Office</em>,<em> Sublime</em>,<em> CLion</em>,<em> Photoshop</em>,<em> CorelDRAW</em> dan kawan-kawannya. Mengingat kembali awal pertemuan saya dengan <em>Windows</em> adalah saat masih menginjak kelas satu SMP tahun 2012, bahkan hingga sampai pertengahan tahun 2018 perusahaan besar tempat saya pernah bekerja mengharuskan saya menggunakan <em>Windows</em>, semua itu terjadi karena kebodohan, ketidaksadaran, dan kemalasan saya untuk mencari tahu alternatif lain yang terbaik selain <em>Windows</em>. </p>
+<p>      Harus saya akui bahwa produk-produk yang terpasang pada alat tempur saya merupakan produk <s>bajakan</s> terbaik yang pernah saya gunakan, yang artinya saya mendapatkan semua itu tanpa membayarnya, atau yang biasa disebut dengan tindakan mencuri.</p>
+<p>      Mari kita pindah ke paragraf selanjutnya agar saya bisa bernafas dengan lebih lega setelah mengakui kesalahan yang pernah saya lakukan dulu</p>
+</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+																								
 								<div class="tags"></div>
 								
 													</div>
@@ -580,7 +372,7 @@ a.toggle-mobile-menu {
 	<footer id="site-footer" role="contentinfo"><div class="copyrights">
     <div class="container">
         <div class="row" id="copyright-note">
-            <span><a href="https://hanjirito.github.io/" title="Stay santuy..">Hanjirito</a> Copyright © 2019.</span>
+            <span><a href="https://hanjirito.github.io/" title="Stay santuy..">Hanjirito</a> Copyright © 2020.</span>
             <div class="top">
                                 <a href="#top" class="toplink">Back to Top ↑</a>
             </div>
@@ -588,4 +380,6 @@ a.toggle-mobile-menu {
     </div>
 </div>
 
-	</footer></div></body></html>
+	</footer><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.2","urls":{"assets":"https:\/\/hanjirito.github.io\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":10,"title":"Raih Kebebasan dengan Linux!","excerpt":""}};
+</script><script type="text/javascript" src="https://hanjirito.github.io/wp-content/plugins/elementor/assets/js/frontend.min.js"></script></div></body></html>
