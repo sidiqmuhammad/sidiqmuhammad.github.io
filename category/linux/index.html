@@ -82,32 +82,10 @@
 	                                } else {
                     tooltip.addClass(tooltipClass);
                 }
-				                $(window).on('keyup', function (e) {
-                    let keyCode = e.keyCode ? e.keyCode : e.which;
-                    if (keyCode == 44) {
-                        stopPrntScr();
-                        show_tooltip( );
-                        audio_play();
-                    }
-                });
 				
 
-				                $(document).on('contextmenu', function (e) {
-                    let t = e || window.event;
-                    let n = t.target || t.srcElement;
-                    if (n.nodeName !== "A") {
-                        show_tooltip( );
-                        audio_play();
-                    }
-                    return false;
-                });
+				
 	            
-	            
-				                $(document).on('dragstart', function () {
-                    show_tooltip( );
-                    audio_play();
-                    return false;
-                });
 				
 				
                 $(window).on('keydown', function (event) {
@@ -122,243 +100,35 @@
                     var isChrome = (BrowserDetect.browser === 'Chrome');
 
                     if (BrowserDetect.OS === 'Windows') {
-						                        if (isChrome) {
-                            if (((event.ctrlKey && event.shiftKey) && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 67))) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isFirefox) {
-                            if (((event.ctrlKey && event.shiftKey) && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 67 ||
-                                event.keyCode === 75 ||
-                                event.keyCode === 69)) ||
-                                event.keyCode === 118 ||
-                                event.keyCode === 116 ||
-                                (event.keyCode === 112 && event.shiftKey) ||
-                                (event.keyCode === 115 && event.shiftKey) ||
-                                (event.keyCode === 118 && event.shiftKey) ||
-                                (event.keyCode === 120 && event.shiftKey)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isOpera) {
-                            if (((event.ctrlKey && event.shiftKey) && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 67 ||
-                                event.keyCode === 88 ||
-                                event.keyCode === 69))) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isIE) {
-                            if ((event.keyCode === 123 && event.shiftKey)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-						
-						                        if ((event.keyCode === 83 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 65 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 86 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 88 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 85 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
 						
 						
-						                        if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
+						
+						
+						
+						
+						
+						
+						
 						                    } else if (BrowserDetect.OS === 'Linux') {
-						                        if (isChrome) {
-                            if (
-                                (
-                                    (event.ctrlKey && event.shiftKey) &&
-                                    (event.keyCode === 73 ||
-                                        event.keyCode === 74 ||
-                                        event.keyCode === 67
-                                    )
-                                ) ||
-                                (event.ctrlKey && event.keyCode === 85)
-                            ) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isFirefox) {
-                            if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 75 || event.keyCode === 69)) || event.keyCode === 118 || event.keyCode === 116 || (event.keyCode === 112 && event.shiftKey) || (event.keyCode === 115 && event.shiftKey) || (event.keyCode === 118 && event.shiftKey) || (event.keyCode === 120 && event.shiftKey) || (event.keyCode === 85 && event.ctrlKey)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-                        if (isOpera) {
-                            if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 88 || event.keyCode === 69)) || (event.ctrlKey && event.keyCode === 85)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-						
-						                        if ((event.keyCode === 83 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if (event.keyCode === 65 && event.ctrlKey) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 86 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 88 && event.ctrlKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 85 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
 						
 						
-						                        if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
+						
+						
+						
+						
+						
+						
+						
 						                    } else if (BrowserDetect.OS === 'Mac') {
-						                        if (isChrome || isSafari || isOpera || isFirefox) {
-                            if (event.metaKey && (
-                                event.keyCode === 73 ||
-                                event.keyCode === 74 ||
-                                event.keyCode === 69 ||
-                                event.keyCode === 75)) {
-                                show_tooltip();
-                                audio_play();
-                                return false;
-                            }
-                        }
-						
-						                        if ((event.keyCode === 83 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 65 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 67 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 86 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 88 && event.metaKey)) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 85 && event.metaKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
-						
-						                        if ((event.keyCode === 70 && event.metaKey) || (event.keyCode === 71 && event.metaKey)) {
-                            show_tooltip( );
-                            audio_play();
-                            return false;
-                        }
 						
 						
-						                        if (event.keyCode === 123) {
-                            show_tooltip();
-                            audio_play();
-                            return false;
-                        }
+						
+						
+						
+						
+						
+						
+						
 						                    }
                 });
 
@@ -497,28 +267,26 @@
             }]
         };
         BrowserDetect.init();
-    </script><style type="text/css">
-			.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-		</style><style type="text/css" id="wp-custom-css">
+    </script><style type="text/css" id="wp-custom-css">
 			.postauthor, .thecomment {
 	display:none; }
 .site-branding {
-	margin:-8px auto;
+	margin:-25px auto -22px auto;
 }
 .social-profile-icons .social-instagram a {
 	background:#e13138; }
-a.toggle-mobile-menu {
+.image-logo img {
+	max-width:250px
+}
+/* a.toggle-mobile-menu {
 	font-weight:800;
-}		</style><div class="main-container">
+}
+*/		</style><div class="main-container">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 		<header id="site-header" role="banner"><div class="container clear">
 				<div class="site-branding">
 																	    <h2 id="logo" class="image-logo" itemprop="headline">
-								<a href="https://hanjirito.github.io/" class="custom-logo-link" rel="home"><img width="249" height="55" src="https://hanjirito.github.io/wp-content/uploads/2019/12/Hanjirito.png" class="custom-logo" alt="Hanjirito"></a>							</h2>
+								<a href="https://hanjirito.github.io/" class="custom-logo-link" rel="home"><img width="889" height="300" src="https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon.png" class="custom-logo" alt="Hanjirito" srcset="https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon.png 889w,https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon-300x101.png 300w,https://hanjirito.github.io/wp-content/uploads/2020/01/HanjiritoMoon-768x259.png 768w" sizes="(max-width: 889px) 100vw, 889px"></a>							</h2>
 															</div>
 							</div>
 			<div class="primary-navigation">
@@ -533,7 +301,7 @@ a.toggle-mobile-menu {
 		<h1 class="postsby">
 			<span>Category: Linux</span>
 		</h1>	
-		        <article class="post excerpt"><div class="post-date-ribbon"><div class="corner"></div>December 24, 2019</div>
+		        <article class="post excerpt"><div class="post-date-ribbon"><div class="corner"></div>January 5, 2020</div>
             <header><h2 class="title">
                     <a href="https://hanjirito.github.io/raih-kebebasan-dengan-linux/" title="Raih Kebebasan dengan Linux!" rel="bookmark">Raih Kebebasan dengan Linux!</a>
                 </h2>
@@ -544,10 +312,10 @@ a.toggle-mobile-menu {
                 </div>
             </header><a href="https://hanjirito.github.io/raih-kebebasan-dengan-linux/" title="Raih Kebebasan dengan Linux!" id="featured-thumbnail">
                         <div class="featured-thumbnail">
-                            <img width="150" height="150" src="https://hanjirito.github.io/wp-content/uploads/2019/12/UsingLinux-150x150.jpg" class="attachment-ribbon-lite-featured size-ribbon-lite-featured wp-post-image" alt="Using Linux" title=""></div>
+                            <img width="150" height="150" src="https://hanjirito.github.io/wp-content/uploads/2020/01/Powered_by_GNU_Linux-150x150.jpg" class="attachment-ribbon-lite-featured size-ribbon-lite-featured wp-post-image" alt="Powered by GNU / Linux" title=""></div>
                     </a>
                                 <div class="post-content">
-                    This is my first post & just for sample.                </div>
+                          Terhitung dari tanggal 14 Desember 2019 kemarin Thikpad T450 yang biasa menemani saya bertempur terlihat semakin cantik menggunakan Arch yang merupakan Sistem Operasi berbasis Linux, dan itu artinya saya harus memulai semuanya dari awal, mulai melambaikan tangan kepada Windows, Microsoft Office, Sublime, CLion, Photoshop, CorelDRAW dan kawan-kawannya. Mengingat kembali awal pertemuan saya                </div>
                         <div class="readMore">
             <a href="https://hanjirito.github.io/raih-kebebasan-dengan-linux/" title="Raih Kebebasan dengan Linux!">
                 Read More            </a>
@@ -566,7 +334,7 @@ a.toggle-mobile-menu {
 	<footer id="site-footer" role="contentinfo"><div class="copyrights">
     <div class="container">
         <div class="row" id="copyright-note">
-            <span><a href="https://hanjirito.github.io/" title="Stay santuy..">Hanjirito</a> Copyright © 2019.</span>
+            <span><a href="https://hanjirito.github.io/" title="Stay santuy..">Hanjirito</a> Copyright © 2020.</span>
             <div class="top">
                                 <a href="#top" class="toplink">Back to Top ↑</a>
             </div>
