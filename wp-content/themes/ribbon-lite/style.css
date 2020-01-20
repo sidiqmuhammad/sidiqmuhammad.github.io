@@ -159,7 +159,7 @@ a#pull {display: none;}
 .single_post {background-color: #fff;padding: 20px 25px;float: left;width: 100%;box-sizing: border-box;border: 1px solid #cdcdcd;}
 .woocommerce .single_page, .woocommerce-page .single_page {padding-bottom: 0px;}
 .post-single-content {font-size: 14px;line-height: 22px;float: left;width: 100%;}
-.readMore {float: right;margin-top: 15px;}
+.readMore {float: right;}
 .readMore a {color: #fff;padding: 5px 12px;transition: all .25s linear;font-family: "Monda",sans-serif;}
 .readMore a:hover {color: #fff;background: #222;}
 .ss-full-width {background: white;padding: 20px;margin-bottom: 30px;overflow: hidden;border: 1px solid #cdcdcd;}
@@ -195,7 +195,7 @@ article header {margin-bottom: 15px;float: left;width: 100%;}
 .corner:before {content: "";position: absolute;left: -10px;width: 0;height: 0;border-style: solid;border-width: 0 0 10px 10px;border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,.15) rgba(0,0,0,0);}
 .toggle-menu ul ul {display: none;}
 .toggle-menu .toggle-menu-item-parent {position: relative;}
-.toggle-menu .toggle-caret {position: absolute;top: 0;right: 3px;text-align: center;cursor: pointer;line-height: inherit;}
+.toggle-menu .toggle-caret {position: absolute;top: 0;right: 10px;text-align: center;cursor: pointer;line-height: inherit;}
 .toggle-menu .toggle-caret i {text-align: center;font-size: 15px;color: inherit;line-height: 20px;}
 .toggle-menu.active > .toggle-caret .ribbon-icon:before {content: "";}
 .toggle-menu .active > .toggle-caret .ribbon-icon:before {content: "";}
@@ -307,7 +307,7 @@ footer .wpt_widget_content a, footer .wp_review_tab_widget_content a {color: #44
 .related-posts .post.excerpt {width: 30.2%;float: left;list-style: none;margin-right: 4.6%;min-height: 100px;clear: none;padding: 0;border: none;overflow: hidden;}
 .related-posts a {display: block;width: 100%;color: #666;}
 .related-posts .title {width: 100%;padding-top: 10px;float: left;margin-top: 0;margin-bottom: 0;font-size: 14px;font-family: inherit;font-weight: normal;line-height: 23px;letter-spacing: initial;color: #444;}
-.postauthor {margin: 10px 0 15px;padding: 0;min-height: 125px;background-color: #fff;float: left;clear: both;width: 100%;}
+.postauthor {display: none;margin: 10px 0 15px;padding: 0;min-height: 125px;background-color: #fff;float: left;clear: both;width: 100%;}
 .postauthor h4 {font-weight: bold;font-size: 18px;}
 .postauthor h5 {text-transform: capitalize;font-weight: bold;font-size: 14px;padding: 0;margin: 0;line-height: 24px;}
 .postauthor img {float: left;margin: 5px 25px 15px 0;}
@@ -368,6 +368,7 @@ ol.commentlist > .navigation.bottomnav {margin-bottom: 0;}
 .comment-notes {font-style: italic;display: none;}
 .form-allowed-tags {display: none;}
 #respond {position: relative;}
+.thecomment {display: none;}
 .infinite-scroll .posts-navigation, .infinite-scroll.neverending #site-footer {display: none;}
 .infinity-end.neverending #site-footer {display: block;}
 .page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {border: none;margin-bottom: 0;margin-top: 0;padding: 0;}
@@ -418,11 +419,11 @@ embed, iframe, object {max-width: 100%;}
 .social-profile-icons .social-vimeo a {background: #35c6ea;}
 .social-profile-icons .social-dribbble a {background: #f7659c;}
 .social-profile-icons .social-tumblr a {background: #426d9b;}
-.social-profile-icons .social-instagram a {background: #91653f;}
+.social-profile-icons .social-instagram a {background: #e13138;}
 .social-profile-icons .social-flickr a {background: #ff48a3;}
 .social-profile-icons .social-pinterest a {background: #e13138;}
 .social-profile-icons .social-linkedin a {background: #238cc8;}
-.social-profile-icons .social-github a {background: #b5a470;}
+.social-profile-icons .social-github a {background: #364956;}
 .social-profile-icons .social-email a {background: #1d90dd;}
 .social-profile-icons .social-behance a {background: #1879fd;}
 .social-profile-icons .social-skype a {background: #13c1f3;}
@@ -470,7 +471,7 @@ embed, iframe, object {max-width: 100%;}
 	#navigation ul ul li:hover {background: none;}
 	#navigation i {display: inline;}
 	#navigation ul ul a {padding: 0 20px;width: 100% !important;}
-	#navigation .toggle-caret {display: block;width: 44px;height: 44px;line-height: 44px;color: #fff;border-left: 1px solid rgba(255,255,255,.15);}
+	#navigation .toggle-caret {display: block;width: 44px;height: 44px;line-height: 44px;color: #fff;}
 	#mobile-menu-overlay {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: -1;cursor: pointer;display: none;backface-visibility: hidden;background: rgba(0,0,0,.5);}
 	html.noscroll {position: fixed;overflow-y: scroll;width: 100%;}
 	.menu-item-has-children > a:after {content: "";}
